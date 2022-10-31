@@ -145,7 +145,7 @@ You get the terminal back, meaning there isnt a scrolling wall of text desribing
 
 # 1.2.6 Notes
 HW: Add Taxi Zone Lookup Table to Postgres\
--[Taxi Zone Table](https://d37ci6vzurychx.cloudfront.net/misc/taxi+_zone_lookup.csv)
+-[Taxi Zone Table](https://d37ci6vzurychx.cloudfront.net/misc/taxi+_zone_lookup.csv)\
 This was done via Jupyter Notebook ([upload-data2.ipynb](https://github.com/rahulchaky/data-eng-camp/blob/main/week_1_basics_n_setup/docker_sql/upload-data2.ipynb)).
 
 ### Joining Yellow Taxi Table with the Zones Lookup Table (SQL)
