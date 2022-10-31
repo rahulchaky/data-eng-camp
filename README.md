@@ -110,4 +110,4 @@ For this course, you'll need to have the following software installed on your co
 See [Week 1](week_1_basics_n_setup) for more details about installing these tools
 
 ### Architecture diagram
-<img src="images/architecture/arch_1.jpg"/>
+<img src="arch_1.jpg"/>
