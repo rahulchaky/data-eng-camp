@@ -2,7 +2,7 @@
 
 * [Video](https://www.youtube.com/watch?v=bkJZDmreIpA&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb)
 * [Slides](https://www.slideshare.net/AlexeyGrigorev/data-engineering-zoomcamp-introduction)
-* Overview of [Architecture](https://github.com/DataTalksClub/data-engineering-zoomcamp#overview), [Technologies](https://github.com/DataTalksClub/data-engineering-zoomcamp#technologies) & [Pre-Requisites](https://github.com/DataTalksClub/data-engineering-zoomcamp#prerequisites)
+* Overview of [Architecture](https://github.com/rahulchaky/data-eng-camp#Architecture), [Technologies](https://github.com/rahulchaky/data-eng-camp#technologies) & [Tools](https://github.com/rahulchaky/data-eng-camp#tools)
 
 
 We suggest watching videos in the same order as in this document.
@@ -13,7 +13,7 @@ if you have troubles setting up the environment and following along with the vid
 
 ### Docker + Postgres
 
-[Code](2_docker_sql)
+[Code](docker_sql)
 
 * [Introduction to Docker](https://www.youtube.com/watch?v=EYNwNlOrpr0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb)
   * Why do we need Docker
@@ -51,7 +51,7 @@ if you have troubles setting up the environment and following along with the vid
 
 ### GCP + Terraform
 
-[Code](1_terraform_gcp)
+[Code](terraform_gcp)
 
 * Introduction to GCP (Google Cloud Platform)
   * [Video](https://www.youtube.com/watch?v=18jIzE41fJ4&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb)
@@ -93,4 +93,5 @@ If you have problems setting up the env, you can check this video:
 
 ### Homework
 
+* [Homework](homework.md)
 * [Solution](https://www.youtube.com/watch?v=HxHqH2ARfxM&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb)
