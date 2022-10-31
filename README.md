@@ -86,7 +86,7 @@ Putting everything we learned to practice
 
 [More details](week_7_project)
 
-### Technologies
+## Technologies
 * *Google Cloud Platform (GCP)*: Cloud-based auto-scaling platform by Google
   * *Google Cloud Storage (GCS)*: Data Lake
   * *BigQuery*: Data Warehouse
@@ -109,5 +109,5 @@ For this course, you'll need to have the following software installed on your co
 
 See [Week 1](week_1_basics_n_setup) for more details about installing these tools
 
-### Architecture diagram
+## Architecture
 <img src="arch_1.jpg"/>
