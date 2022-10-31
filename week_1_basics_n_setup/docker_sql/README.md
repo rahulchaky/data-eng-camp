@@ -17,6 +17,8 @@ pgcli -p 5432 -u root -d ny_taxi
 ```
 
 ## NY Trips Dataset
+- This is the original site where the files were hosted
+  - https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 - This provides information about what each column means
   - https://www1.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf
 - URL for the data for this week
@@ -116,6 +118,7 @@ Running Docker-Compose:
 docker-compose up
 ```
 Unfortunately once we login to localhost:8080, we have to add the server again.
+Edit: Updated the .yaml file so that pgadmin remembers the server config, only have to enter the password for the db to enter.
 1. Login via PGAdmin username and password.
 2. Click on Add New Server.
 3. Give the server a name.
@@ -139,3 +142,80 @@ If you run:
 docker-compose up -d
 ```
 You get the terminal back, meaning there isnt a scrolling wall of text desribing the processes running. This is convenient, although you could always use multiple terminal windows. To shut it down in this case, we can run the same command to shut down docker compose and it will stop running the containers and delete them.
+
+# 1.2.6 Notes
+HW: Add Taxi Zone Lookup Table to Postgres\
+-[Taxi Zone Table](https://d37ci6vzurychx.cloudfront.net/misc/taxi+_zone_lookup.csv)
+This was done via Jupyter Notebook ([upload-data2.ipynb](https://github.com/rahulchaky/data-eng-camp/blob/main/week_1_basics_n_setup/docker_sql/upload-data2.ipynb)).
+
+### Joining Yellow Taxi Table with the Zones Lookup Table (SQL)
+```
+SELECT 
+	tpep_pickup_datetime,
+	tpep_dropoff_datetime,
+	total_amount,
+	CONCAT(zpu."Borough", ' / ', zpu."Zone") AS "pickup_loc",
+	CONCAT(zdo."Borough", ' / ', zdo."Zone") AS "dropoff_loc"
+FROM 
+	yellow_taxi_trips t,
+	zones zpu,
+	zones zdo
+WHERE
+	t."PULocationID" = zpu."LocationID" AND
+	t."DOLocationID" = zdo."LocationID"
+LIMIT 100;
+```
+
+The above is called performing a join on two tables. This can be more explictly written as:
+```
+SELECT 
+	tpep_pickup_datetime,
+	tpep_dropoff_datetime,
+	total_amount,
+	CONCAT(zpu."Borough", ' / ', zpu."Zone") AS "pickup_loc",
+	CONCAT(zdo."Borough", ' / ', zdo."Zone") AS "dropoff_loc"
+FROM 
+	yellow_taxi_trips t JOIN zones zpu
+		ON t."PULocationID" = zpu."LocationID"
+	JOIN zones zdo
+		ON t."DOLocationID" = zdo."LocationID"
+LIMIT 100;
+```
+Either will output the same table and there is not difference in the speed.
+
+### Checking for records where the data could be empty
+```
+SELECT 
+	tpep_pickup_datetime,
+	tpep_dropoff_datetime,
+	total_amount,
+	"PULocationID",
+	"DOLocationID"
+FROM 
+	yellow_taxi_trips
+WHERE
+	"PULocationID" = NULL OR
+	"DOLocationID" = NULL
+LIMIT 100;
+```
+In this case there is no missing data.
+
+### Checking for Location IDs in the Taxi Trips Table that are not in the Taxi Zones Table
+```
+SELECT 
+	tpep_pickup_datetime,
+	tpep_dropoff_datetime,
+	total_amount,
+	"PULocationID",
+	"DOLocationID"
+FROM 
+	yellow_taxi_trips t
+WHERE
+	"PULocationID" NOT IN (SELECT "LocationID" FROM zones) OR
+	"DOLocationID" NOT IN (SELECT "LocationID" FROM zones)
+LIMIT 100;
+```
+Once again, there is no data that is missing.
+
+If there is missing data, you can use LEFT and RIGHT joins to get the data. This will display NULL for where there is missing data.
+There is plenty of other things you can do with the data like grouping, ordering, finding min and max, etc.

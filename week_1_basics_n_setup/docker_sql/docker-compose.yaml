@@ -26,5 +26,8 @@ services:
     environment:
       - PGADMIN_DEFAULT_EMAIL=admin@admin.com
       - PGADMIN_DEFAULT_PASSWORD=root
+    volumes:
+      # This allows pgadmin to remember the server configuration so everytime we open it we do not need to add a new server
+      - "./data_pgadmin:/var/lib/pgadmin"
     ports:
       - "8080:80"
