@@ -1,13 +1,13 @@
 # Data Engineering Camp
 
 TODO: Update README.md on each of the weeks as work is completed through the modules.
-- [] Week 1
-- [] Week 2
-- [] Week 3
-- [] Week 4
-- [] Week 5
-- [] Week 6
-- [] Week 7
+- [ ] Week 1
+- [ ] Week 2
+- [ ] Week 3
+- [ ] Week 4
+- [ ] Week 5
+- [ ] Week 6
+- [ ] Week 7
 
 My Work from Data Engineering Zoomcamp
 - [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
