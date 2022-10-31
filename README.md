@@ -85,3 +85,29 @@ Putting everything we learned to practice
 * Week 7, 8 & 9: working on your project
 
 [More details](week_7_project)
+
+### Technologies
+* *Google Cloud Platform (GCP)*: Cloud-based auto-scaling platform by Google
+  * *Google Cloud Storage (GCS)*: Data Lake
+  * *BigQuery*: Data Warehouse
+* *Terraform*: Infrastructure-as-Code (IaC)
+* *Docker*: Containerization
+* *SQL*: Data Analysis & Exploration
+* *Airflow*: Pipeline Orchestration
+* *dbt*: Data Transformation
+* *Spark*: Distributed Processing
+* *Kafka*: Streaming
+
+## Tools 
+
+For this course, you'll need to have the following software installed on your computer:
+
+* Docker and Docker-Compose
+* Python 3 (e.g. via [Anaconda](https://www.anaconda.com/products/individual))
+* Google Cloud SDK 
+* Terraform
+
+See [Week 1](week_1_basics_n_setup) for more details about installing these tools
+
+### Architecture diagram
+<img src="images/architecture/arch_1.jpg"/>
