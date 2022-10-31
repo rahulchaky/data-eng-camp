@@ -1,0 +1,30 @@
+# from pgadmin we will be able to access postgres from the name 'pgdatabase'
+# because they are defined here together, they automatically become part of the same network
+# so we don't need to create and specify the network, when we do 'docker run' it will happen automatically
+services:
+  # we have the two services (containers) from prior (pgdatabase and pgadmin)
+  # the image is the last line of the docker calls
+  # the environment are the -e lines
+  # the volumes are for location of postgres
+  # the ports are for when connecting to network
+  pgdatabase:
+    image: postgres:13
+    environment:
+      # we don't need the "" that we had prior
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=ny_taxi
+    volumes:
+      # in docker compose we don't need to write the full path
+      # the rw is not required, but we can specify it (rw - meaning read write)
+      # notice that the volumes and ports do require ""
+      - "./ny_taxi_postgres_data:/var/lib/postgresql/data:rw"
+    ports:
+      - "5432:5432"
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=root
+    ports:
+      - "8080:80"

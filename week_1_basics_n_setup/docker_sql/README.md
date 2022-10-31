@@ -106,3 +106,36 @@ docker run -it \
     --url="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
 ```
 [^1]: I didn't really start taking notes until here. However, there are various edits made above to make things a little clearer.
+
+# 1.2.5 Notes
+Goal of 1.2.5 is to have one '.yaml' file to have everything set up in. Basically we need some file that creates two containers, one Postgres and one PGAdmin, and a network that the two of them belong to.
+
+To this we will use **Docker Compose**. If you have Docker Desktop, this is already installed with Docker.
+Running Docker-Compose:
+```
+docker-compose up
+```
+Unfortunately once we login to localhost:8080, we have to add the server again.
+1. Login via PGAdmin username and password.
+2. Click on Add New Server.
+3. Give the server a name.
+4. Click on the connection tab.
+5. Since we are connecting to the other container, the name is the other container's name (in this case it is pgdatabase).
+6. Enter the username and password from postgres.
+7. Save and you should be connected.
+
+Closing Containers and Docker-Compose
+1. Go to the terminal where you ran docker-compose.
+2. Press Ctrl+C. This stops running the docker containers.
+3. Shut the docker-compose down.
+Shutting Down Docker-Compose:
+```
+docker-compose down
+```
+This deletes the containers from memory.
+
+If you run:
+```
+docker-compose up -d
+```
+You get the terminal back, meaning there isnt a scrolling wall of text desribing the processes running. This is convenient, although you could always use multiple terminal windows. To shut it down in this case, we can run the same command to shut down docker compose and it will stop running the containers and delete them.
