@@ -62,7 +62,7 @@ docker run -it \
   postgres:13
 ```
 
-**Quick Note Regarding Docker**\n
+**Quick Note Regarding Docker**\
 Using Docker Desktop, you can choose to when the containers are running or not. This way you only have to run all of the docker commands once.
 
 ## 1.2.4 Notes[^1]
