@@ -1,4 +1,7 @@
 # Data Engineering Camp
+
+TODO: Update README.md on each of the weeks as work is completed through the modules.
+
 My Work from Data Engineering Zoomcamp
 - [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 
