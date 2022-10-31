@@ -82,7 +82,6 @@ My Work from Data Engineering Zoomcamp
 
 Putting everything we learned to practice
 
-* Week 7 and 8: working on your project
-* Week 9: reviewing your peers
+* Week 7, 8 & 9: working on your project
 
 [More details](week_7_project)
