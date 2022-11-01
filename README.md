@@ -1,7 +1,7 @@
 # Data Engineering Camp
 
 TODO: Update README.md hyperlinks on each of the weeks as work is completed through the modules.
-- [ ] Week 1
+- [x] Week 1
 - [ ] Week 2
 - [ ] Week 3
 - [ ] Week 4
