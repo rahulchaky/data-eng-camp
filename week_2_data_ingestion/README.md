@@ -54,3 +54,4 @@ You will need an AWS account for this. This section is optional
 In the homework, you'll create a few DAGs for processing the NY Taxi data for 2019-2021
 
 More information [here](homework.md)
+[Solution](https://www.youtube.com/watch?v=-0xl4GtSugQ&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=25)
