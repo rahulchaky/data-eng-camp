@@ -16,3 +16,10 @@
 ### Terraform Workshop for GCP Infra
 Your setup is ready!
 Now head to the [terraform](terraform) directory, and perform the execution steps to create your infrastructure.
+
+# Notes
+### 1.1.1 GCP
+GCP - Google Cloud Platform
+- Cloud computing service offered by Google
+- Includes a range of hosted services for compute, storage, and application development that runs on Google hardware
+- Same hardware on which Google runs its service
