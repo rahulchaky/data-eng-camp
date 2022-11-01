@@ -23,3 +23,11 @@ GCP - Google Cloud Platform
 - Cloud computing service offered by Google
 - Includes a range of hosted services for compute, storage, and application development that runs on Google hardware
 - Same hardware on which Google runs its service
+
+### 1.3.1 Introduction to Terraform and GCP
+- Installed Terraform and Google Cloud CLI
+- Created keys folder to store keys for GC
+- Finished setup of GCP
+
+### 1.3.2 Creating GCP Infrastructure with Terraform
+- Hopefully GCP is set up properly(?)
