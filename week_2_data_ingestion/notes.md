@@ -121,3 +121,19 @@ Data Workflow Orchestration Tools (for big workflows)
     - Prefect
     - Argo
 - These tools allow us to specify our data workflows, parameterize them, and run it all.
+
+## Week 2.3.2
+Refer to [Airflow Notes](https://github.com/rahulchaky/data-eng-camp/tree/main/week_2_data_ingestion/airflow/docs/1_concepts.md)
+Somehow it worked. In airflow direcory:
+1. `docker-compose up airflow-init`
+2. `docker-compose up`
+3. Go to localhost:8080
+4. Login u:airflow p:airflow
+5. Go to DAG
+6. Run it, it will download but fail the unzip.
+7. Make new terminal and run `docker ps`
+8. `docker exec -it <airflow-scheduler-container-id> bash`
+9. List the files and then run `gunzip <data>.csv.gz`
+10. Mark the onhold task in DAG as success. This will cause the next task to run.
+11. Everything else should work.
+The error should be some code logic mistake with how the name is being passed around.
