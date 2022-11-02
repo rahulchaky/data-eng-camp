@@ -1,5 +1,5 @@
 # Week 2 Notes
-## 2.2.1 Data Lake
+## 2.1.1 Data Lake
 ### Features of a Data Lake
 A **Data Lake** is a central repository that holds BigData from many sources. The idea is to ingest data as quickly as possible and make it available to other team members.
 - Ingest structured and unstructured data
