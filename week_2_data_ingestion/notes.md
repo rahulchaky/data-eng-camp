@@ -49,7 +49,7 @@ These difference can be even further expanded
 
 ### Gotcha of Data Lake
 Data Swamp: an unmanaged Data Lake that is either inaccessible to intended users or provides little value.\
-Reasons a Data Lake can convert into a Data Swamp
+Reasons a Data Lake can convert into a Data Swamp:
 - No versioning
 - Incompatible schemas for same data without versioning
     - Ex: You are writing trip data as Arrow File Format in one folder and the next day you switch to writing data as Parquet File Format into the same folder. This makes it really hard for consumers to consume this data rendering the dataset useless.
