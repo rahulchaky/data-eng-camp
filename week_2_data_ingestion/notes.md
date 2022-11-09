@@ -123,7 +123,7 @@ Data Workflow Orchestration Tools (for big workflows)
 - These tools allow us to specify our data workflows, parameterize them, and run it all.
 
 ## Week 2.3.2
-Refer to [Airflow Notes](https://github.com/rahulchaky/data-eng-camp/tree/main/week_2_data_ingestion/airflow/docs/1_concepts.md)
+Refer to [Airflow Notes](https://github.com/rahulchaky/data-eng-camp/tree/main/week_2_data_ingestion/airflow/docs/1_concepts.md)\
 Somehow it worked. In airflow direcory:
 1. `docker-compose up airflow-init`
 2. `docker-compose up`
