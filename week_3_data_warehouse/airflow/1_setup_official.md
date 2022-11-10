@@ -1,3 +1,4 @@
+The hyperlinks do not work as this file was copied from week 2.
 ## Setup (Official)
 
 ### Pre-Reqs
