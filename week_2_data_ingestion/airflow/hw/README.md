@@ -26,3 +26,24 @@ Below will just be various status updates and notes on any thoughts, questions, 
 
 ### Cleanup
 - I consolidated all the DAGs into the same folder as there was no need to have them in separate folders. All of the necessary files were successfully added to GCP Cloud Storage.
+
+### Uploading the Data to BigQuery
+1. Go to BigQuery.
+
+2. Click on the three dots next to your project and click on 'Create Dataset'.
+
+3.  Give the dataset an ID and set the location as the same as the files in the cloud storage. Then click on 'Create Dataset'.
+
+4. Now run this query for each table that you want to create:
+```
+CREATE OR REPLACE EXTERNAL TABLE liquid-terra-367315.nytaxi.<table_name>
+OPTIONS (
+    format = 'parquet',
+    uris = [
+        'gs://dtc_data_lake_liquid-terra-367315/raw/yellow_tripdata/2019/*',
+        'gs://dtc_data_lake_liquid-terra-367315/raw/yellow_tripdata/2020/*'
+    ]
+)
+```
+
+5. Now you should see the tables in BigQuery.
