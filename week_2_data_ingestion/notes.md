@@ -137,3 +137,6 @@ Somehow it worked. In airflow directory:
 10. Mark the onhold task in DAG as success. This will cause the next task to run.
 11. Everything else should work.
 The error should be some code logic mistake with how the name is being passed around.
+
+## Week 2.3.3
+Refer to [Lab Notes](https://github.com/rahulchaky/data-eng-camp/tree/main/week_2_data_ingestion/airflow/lab/README.md)

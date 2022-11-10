@@ -1,0 +1,5 @@
+docker_sql/data_pgadmin
+docker_sql/ny_taxi_postgres_data
+docker_sql/output.csv.gz
+docker_sql/taxi+_zone_lookup.csv
+docker_sql/.ipynb_checkpoints

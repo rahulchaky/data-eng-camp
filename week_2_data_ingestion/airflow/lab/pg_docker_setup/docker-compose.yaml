@@ -23,13 +23,20 @@ services:
       - "5432:5432"
     networks:
       - airflow
-  pgadmin:
-    image: dpage/pgadmin4
-    environment:
-      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
-      - PGADMIN_DEFAULT_PASSWORD=root
-    volumes:
-      # This allows pgadmin to remember the server configuration so everytime we open it we do not need to add a new server
-      - "./data_pgadmin:/var/lib/pgadmin"
-    ports:
-      - "8080:80"
+  # Commented out pgadmin because airflow is running on localhost:8080 already
+  # pgadmin:
+  #   image: dpage/pgadmin4
+  #   environment:
+  #     - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+  #     - PGADMIN_DEFAULT_PASSWORD=root
+  #   volumes:
+  #     # This allows pgadmin to remember the server configuration so everytime we open it we do not need to add a new server
+  #     - "./data_pgadmin:/var/lib/pgadmin"
+  #   ports:
+  #     - "8080:80"
+
+networks:
+  # Adding the network to connect to the container with airflow.
+  airflow:
+    external:
+      name: lab-default
