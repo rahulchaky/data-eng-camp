@@ -1,6 +1,6 @@
 ### Concepts
 
- [Airflow Concepts and Architecture](../week_2_data_ingestion/airflow/docs/1_concepts.md)
+ [Airflow Concepts and Architecture](https://github.com/rahulchaky/data-eng-camp/blob/main/week_2_data_ingestion/airflow/docs/1_concepts.md)
 
 ### Workflow
 
