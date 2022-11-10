@@ -12,7 +12,8 @@ TODO: Update README.md hyperlinks on each of the weeks as work is completed thro
 My Work from Data Engineering Zoomcamp
 - [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 
-From Week 3 onwards all of my work will be in a separate directory called `lab`.
+From Week 3 onwards all of my work will be in a separate directory called [lab](https://github.com/rahulchaky/data-eng-camp/tree/main/lab).
+I also consolidated all of my notes into the [notes](https://github.com/rahulchaky/data-eng-camp/tree/main/notes) directory.
 
 ### [Week 1: Introduction & Prerequisites](week_1_basics_n_setup)
 
