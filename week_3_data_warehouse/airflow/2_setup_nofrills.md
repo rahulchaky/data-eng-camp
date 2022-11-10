@@ -1,4 +1,4 @@
-The hyperlinks do not work as this file was copied from week 2.
+The hyperlinks may not work as this file was copied from week 2.
 ## Setup (No-frills)
 
 ### Pre-Reqs
