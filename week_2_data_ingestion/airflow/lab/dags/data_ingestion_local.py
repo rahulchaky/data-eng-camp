@@ -27,6 +27,8 @@ URL_TEMPLATE = URL_PREFIX + \
     '/yellow_tripdata_{{ execution_date.strftime(\'%Y-%m\') }}.csv.gz'
 OUTPUT_FILE_TEMPLATE = AIRFLOW_HOME + \
     '/output_{{ execution_date.strftime(\'%Y-%m\') }}.csv.gz'
+UNZIP_OUTPUT_FILE_TEMPLATE = AIRFLOW_HOME + \
+    '/output_{{ execution_date.strftime(\'%Y-%m\') }}.csv'
 # Table Template
 TABLE_NAME_TEMPLATE = 'yellow_taxi_{{ execution_date.strftime(\'%Y_%m\') }}'
 
@@ -67,7 +69,7 @@ with local_workflow:
             port=PG_PORT,
             db=PG_DATABASE,
             table_name=TABLE_NAME_TEMPLATE,
-            csv_file=OUTPUT_FILE_TEMPLATE
+            csv_file=UNZIP_OUTPUT_FILE_TEMPLATE
         ),
     )
 

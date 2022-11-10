@@ -22,7 +22,7 @@ services:
     ports:
       - "5432:5432"
     networks:
-      - airflow
+      - lab_default
   # Commented out pgadmin because airflow is running on localhost:8080 already
   # pgadmin:
   #   image: dpage/pgadmin4
@@ -37,6 +37,5 @@ services:
 
 networks:
   # Adding the network to connect to the container with airflow.
-  airflow:
-    external:
-      name: lab-default
+  lab_default:
+    external: true

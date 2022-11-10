@@ -106,16 +106,19 @@ Note: A lot of these steps are the same as the ones found in the [setup](https:/
 
 27. First, run `docker ps` and make sure no containers are running. After that run `docker-compose up` to start Airflow up.
 
-28. In a new terminal run `docker network ls` and find the relevant network.
-    - In this case, since everything is in the `lab` directory, the network is called `lab-default`.
+28. In a new terminal run `docker network ls` and find the relevant network. In the future, this is not necessary. The network will always be `<folder_name>_default`.
+    - In this case, since everything is in the `lab` directory, the network is called `lab_default`.
 
-29. Now we need to connect the `docker-compose.yaml` file from here with the one in week 1. The idea is that we will have two separate containers, one for airflow and the other for postgres, but they will be in the same network.
-    - Orginially, for the sake of having everything in one place, I wanted to copy the `docker-compose.yaml` file from week 1 into its own directory and run it, but it did not work for me.
-    - **TRY AGAIN THIS SHOULD WORK WITH THE SOLUTIONS LISTED BELOW NEED TO FIX WEEK 1 AS WELL**
+29. Now we need to connect the `docker-compose.yaml` file from here with the one in week 1. For the sake of having everything in one place, I copied the `docker-compose.yaml` file from week 1 into its own directory. The idea is that we will have two separate containers, one for airflow and the other for postgres, but they will be in the same network.
 
-30. Copy the `docker-compose.yaml` file. I renamed the original one to `docker-compose_orig.yaml`. Now run this docker-compose file.
-    - I often got errors regarding the external network so hopefully this works.
-    - Possible [Solution](https://stackoverflow.com/questions/38088279/communication-between-multiple-docker-compose-projects)
+30. Once the `docker-compose.yaml` file has been copied into its own directory, we can add the network. The code block below is what worked for me. Now run this docker-compose file.
+    - I often got errors regarding the external network.
+    - [Stack Overflow Possible Solutions](https://stackoverflow.com/questions/38088279/communication-between-multiple-docker-compose-projects)
+```
+networks:
+    lab_default:
+        external: true
+```
 
 31. Run `pgcli -h localhost -p 5432 -U root -d ny_taxi` to test if Postgres is running.
 
@@ -126,3 +129,21 @@ Note: A lot of these steps are the same as the ones found in the [setup](https:/
     - Run `engine = create_engine('postgresql://root:root@pgdatabase:5432/ny_taxi')`
         - This is intended to be `(f'postgresql://{user}:{password}@{host}:{port}/{db_name}')`
     - Then finally, `engine.connect()`.
+    - If successful it should print something like this:
+        - `<sqlalchemy.engine.base.Connection object at 0x7fe110dc0ed0>`
+
+33. Now we need to check if the DAG functions properly following all the changes made to the Python scripts.
+    - Note: Airflow Tasks are **idempotent**.
+        - This means that if some task were run over and over again it would produce the same reults. Basically it doesn't matter if:
+            - the task breaks halfway and then successfully finishes 
+            - the task is run once
+            - the the task is run multiple times
+        - All of these cases should present the same output.
+        - This is why we keep the line:
+            - `df.head(n=0).to_sql(name=table_name, con=engine, if_exists='replace')`
+
+34. Clear the DAG and start up the relevant tasks (the first 7) as only the csv files for those exist.
+
+35. If finished successfully, you can check if the tables have shown up in Postgres using `pgcli`.
+
+36. This is a lot more complicated since you don't have to really mess with setting up a network to transfer to local database. However, if you have reached this point the original goal has been achieved!

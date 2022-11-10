@@ -1,3 +1,4 @@
 dags/__pycache__
 logs/
 plugins/
+pg_docker_setup/ny_taxi_postgres_data
