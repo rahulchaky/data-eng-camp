@@ -30,6 +30,6 @@ Partitioning cannot be created on all data types.
 Partitioning and clustering also creates extra metadata.  
 Before query execution this metadata needs to be processed.
 
-### (Not required) Question 7: 
+### Question 7: 
 **In which format does BigQuery save data**  
 Review big query internals video.
