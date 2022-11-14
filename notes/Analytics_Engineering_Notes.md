@@ -15,3 +15,6 @@ OPTIONS (
 ```
 
 ## Setting up dbt for using BigQuery
+- [Instructions](https://github.com/rahulchaky/data-eng-camp/blob/main/week_4_analytics_engineering/dbt_cloud_setup.md)
+- I had no issues in setting up dbt.
+
