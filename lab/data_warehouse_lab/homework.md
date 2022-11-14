@@ -6,7 +6,7 @@ Can load the data for cloud storage and run a count(*)
 
 Solution:
 1. Loading the fhv_2019 data from Google Cloud Storage into an external table
-The pseudocode is found below.\
+The pseudocode is found below.[^1]
 ```
 CREATE OR REPLACE EXTERNAL TABLE liquid-terra-367315.nytaxi.<table_name>
 OPTIONS (
@@ -18,7 +18,7 @@ OPTIONS (
 )
 ```
 
-We have done this in the week 2 homework.
+[^1]:We have done this in the week 2 homework.
 
 2. Finding the count
 ```
