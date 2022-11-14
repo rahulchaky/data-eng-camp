@@ -12,7 +12,7 @@ By this stage of the course you should have already:
     * fhv data - Year 2019. 
 
 _Note:_
-  *  _A quick hack has been shared to load that data quicker, check instructions in [week3/extras](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/week_3_data_warehouse/extras)_
+  *  _A quick hack has been shared to load that data quicker, check instructions in [week3/extras](https://github.com/rahulchaky/data-eng-camp/tree/main/week_3_data_warehouse/extras)_
   * _If you recieve an error stating "Permission denied while globbing file pattern." when attemting to run fact_trips.sql this video may be helpful in resolving the issue_ 
  
  :movie_camera: [Video](https://www.youtube.com/watch?v=kL3ZVNL9Y4A)
