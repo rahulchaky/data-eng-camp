@@ -107,7 +107,8 @@ dbt is a transformation tool that allows anyone that knows SQL to deploy analyti
     - ![](images/we_dbt.PNG)
 
 ## Starting a dbt Project
-
+- Easier to use new Github repo and copy over the folder after this section is finished.
+- Can only edit in not the main branch and then merge when done.
 
 ## Development of dbt Models
 
