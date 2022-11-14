@@ -80,7 +80,7 @@
 - Clustering improves:
     - Filter queries
     - Aggregate queries
-- Tables with data size < 1GB, don't show significant improvement with partitioning and clustering
+- Tables with data size > 1GB, don't show significant improvement with partitioning and clustering
 - You can specify up to 4 clustering columns
 - Clustering columns must be top-level, non-repeated columns
 - Clustering columns can be of these types:
