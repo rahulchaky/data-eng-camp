@@ -3,7 +3,7 @@
 TODO: Update README.md hyperlinks on each of the weeks as work is completed through the modules.
 - [x] Week 1
 - [x] Week 2
-- [ ] Week 3
+- [x] Week 3
 - [ ] Week 4
 - [ ] Week 5
 - [ ] Week 6
