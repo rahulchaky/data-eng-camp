@@ -144,3 +144,5 @@
 - `Order` statements should be the last part of your query, for query operations to maximize performance
 - Optimize your join patterns
     - As a best practice, place the table with the largest number of rows first, followed by the table with the fewest rows, and then place the remaining tables by decreasing size.
+
+### [Homework w/ Solutions](https://github.com/rahulchaky/data-eng-camp/blob/main/lab/data_warehouse_lab/homework.md)

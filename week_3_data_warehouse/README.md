@@ -45,4 +45,4 @@
 - DAG: [gcs_to_bq_dag.py](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/week_3_data_warehouse/airflow/dags/gcs_to_bq_dag.py)
 
 
-### [Homework](homework.md)
+### [Homework w/ Solutions](https://github.com/rahulchaky/data-eng-camp/blob/main/lab/data_warehouse_lab/homework.md)
