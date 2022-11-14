@@ -108,8 +108,4 @@ Review big query internals video.
 
 Solution:
 
-<<<<<<< Updated upstream
-**Answer: **
-=======
 **Answer: Columnar**
->>>>>>> Stashed changes
