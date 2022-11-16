@@ -46,7 +46,7 @@ Analytics Engineering generally deals with Data Modeling and Data Presentation.
     - ELT
         - Faster and more flexible data analysis
         - Lower cost and lower maintenance
-        - ![ELT Diagram](https://github.com/rahulchaky/data-eng-camp/blob/main/notes/images/elt.PNG)
+        - ![ELT Diagram](https://github.com/rahulchaky/data-eng-camp/blob/main/notes/images/etl.PNG)
 
 ### Kimball's Dimensional Modeling
 - Objective
