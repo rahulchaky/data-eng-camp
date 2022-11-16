@@ -42,11 +42,11 @@ Analytics Engineering generally deals with Data Modeling and Data Presentation.
     - ETL
         - Slightly more stable and compliant data analysis
         - Higher storage and compute costs
-        - ![ETL Diagram](images/etl.png)
+        - ![ETL Diagram]([images/etl.png](https://github.com/rahulchaky/data-eng-camp/blob/main/notes/images/etl.PNG))
     - ELT
         - Faster and more flexible data analysis
         - Lower cost and lower maintenance
-        - ![ELT Diagram](images/elt.png)
+        - ![ELT Diagram](https://github.com/rahulchaky/data-eng-camp/blob/main/notes/images/elt.PNG)
 
 ### Kimball's Dimensional Modeling
 - Objective
