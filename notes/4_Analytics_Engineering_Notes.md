@@ -1,4 +1,5 @@
 # Analytics Engineering Notes
+NOTE: I was unable to finish this module as dbt and BigQuery had errors regarding the locations of the data that was unable to be resolved.
 
 ## Dealing with Prerequistes
 **Ingesting the Green Taxi Data - Years 2019 and 2020**\
