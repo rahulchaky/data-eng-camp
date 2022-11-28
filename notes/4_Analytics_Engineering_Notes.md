@@ -111,7 +111,29 @@ dbt is a transformation tool that allows anyone that knows SQL to deploy analyti
 - Can only edit in not the main branch and then merge when done.
 
 ## Development of dbt Models
-
+- **Anatomy of a dbt Model**
+    - **Several Materialization Strategies**
+        - Table
+        - View
+        - Incremental
+        - Ephemeral
+- **The FROM Clause of a dbt Model**
+    - **Sources**
+        - The data loaded to our data warehouse that we use as sources for our models
+        - Configuration defined in the yml files in the models folder
+        - Used with the source macro that will resolve the name to the right schema, plus build the dependencies automatically
+        - Source freshness can be defined and tested
+    - **Seeds**
+        - CSV files stored in our repository under the seed folder
+        - Benefits of version controlling
+        - Equivalent to a copy command
+        - Recommended for data that doesn't change frequently
+            - If it changes frequently, you should setup a pipeline
+        - Runs with `dbt seed -s file_name`
+    - **Ref**
+        - Macro to reference the underlying tables and views that were building the data warehouse
+        - Run the same code in any environment, it will resolve the schema for you
+        - Dependencies are built automatically
 
 ## Testing and Documenting dbt Models
 
