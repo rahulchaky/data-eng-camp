@@ -1,23 +1,13 @@
 # Analytics Engineering Notes
-NOTE: I was unable to finish this module as dbt and BigQuery had errors regarding the locations of the data that was unable to be resolved.
+NOTE: I was unable to originally finish this module as dbt and BigQuery had errors regarding the locations of the data that was unable to be resolved. I decided to follow the alternative path and setup and use local Postgres and dbt for this module.
 
-## Dealing with Prerequistes
-**Ingesting the Green Taxi Data - Years 2019 and 2020**\
-I made a [file](https://github.com/rahulchaky/data-eng-camp/blob/main/week_2_data_ingestion/airflow/hw/dags/green_taxi_dag.py) to ingest the Green Taxi data. This process was slightly different as the backup csv links did not work. I ended up using the parquet files provided directly from the [NYC TLC](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page). Then, I created a table in BigQuery using the files that were uploaded to GCS.
-```
-CREATE OR REPLACE EXTERNAL TABLE liquid-terra-367315.nytaxi.green_tripdata
-OPTIONS (
-    format = 'parquet',
-    uris = [
-        'gs://dtc_data_lake_liquid-terra-367315/raw/green_tripdata/2019/*',
-        'gs://dtc_data_lake_liquid-terra-367315/raw/green_tripdata/2020/*'
-    ]
-)
-```
+## Setup for Week 4 (Attempt 2)
+1. First I manually installed Postgres, it comes with pgadmin as well.
+2. Ingest data to Postgres
+3. Create a new github repo for dbt
+4. Setup profile.yml for dbt to connect to postgres
+5. 
 
-## Setting up dbt for using BigQuery
-- [Instructions](https://github.com/rahulchaky/data-eng-camp/blob/main/week_4_analytics_engineering/dbt_cloud_setup.md)
-- I had no issues in setting up dbt.
 
 ## Introduction to Analytics Engineering
 ### What is Analytics Engineering?
@@ -143,3 +133,27 @@ dbt is a transformation tool that allows anyone that knows SQL to deploy analyti
 
 
 ## Visualizing the Transformed Data
+
+
+
+NOTE: Everything below this point is in reference to dbt Cloud and BigQuery which I was not able to get to work.
+
+## Dealing with Prerequistes
+**Ingesting the Green Taxi Data - Years 2019 and 2020**\
+I made a [file](https://github.com/rahulchaky/data-eng-camp/blob/main/week_2_data_ingestion/airflow/hw/dags/green_taxi_dag.py) to ingest the Green Taxi data. This process was slightly different as the backup csv links did not work. I ended up using the parquet files provided directly from the [NYC TLC](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page). Then, I created a table in BigQuery using the files that were uploaded to GCS.
+```
+CREATE OR REPLACE EXTERNAL TABLE liquid-terra-367315.nytaxi.green_tripdata
+OPTIONS (
+    format = 'parquet',
+    uris = [
+        'gs://dtc_data_lake_liquid-terra-367315/raw/green_tripdata/2019/*',
+        'gs://dtc_data_lake_liquid-terra-367315/raw/green_tripdata/2020/*'
+    ]
+)
+```
+
+## Setting up dbt for using BigQuery
+- [Instructions](https://github.com/rahulchaky/data-eng-camp/blob/main/week_4_analytics_engineering/dbt_cloud_setup.md)
+- I had no issues in setting up dbt.
+
+
